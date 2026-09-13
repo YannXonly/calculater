@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #8b8d90e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+  width: clamp(340px , 360px , 360px) ;
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+
+}
+
+.display {
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  color: #fff;
+  font-size: 1.8rem;
+  
+
+ 
+}
+.displayPrev{
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  user-select: none;
+
+}
+
+.btn {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 20px;
+  font-size: 1.7rem;
+  border-radius: 25%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #444444;
+}
+
+.btn.operator {
+  background-color: #a5a5a5;
+  color: #000000;
+}
+
+.btn.operator:hover {
+  background-color: #d2d2d2;
+}
+
+.btn.equals {
+  background-color: #ff9f0a;
+  color: #ffffff;
+}
+#btn-delete {
+  font-weight: 600;
+}
+.btn.operator.basic {
+  background-color: #ff9f0a;
+  color: #ffffff;
+  font-size: 1.7rem;
+}
+.btn.operator.basic:hover {
+  background-color: #fca92a;
+}

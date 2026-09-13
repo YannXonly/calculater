@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Document</title>
+</head>
+<body>
+    <div class="calculator">
+        
+        <div class="display">
+            <p class="displayPrev">0</p>
+            <p class="displayNow">0</p>
+        </div>
+
+  
+        
+        <div class="buttons">
+            <button class="btn operator" id="ac" onclick="ClearDisplay()">AC</button>
+            <button class="btn operator" id="del" onclick="Delete()">⬅</button>
+            <button class="btn operator" id="per" onclick="appendToDisplay('%')">%</button>
+            <button class="btn operator basic" id="div" onclick="appendToDisplay('÷')">÷</button>
+            
+            <button class="btn" id="7" onclick="appendToDisplay('7')">7</button>
+            <button class="btn" id="8" onclick="appendToDisplay('8')">8</button>
+            <button class="btn" id="9" onclick="appendToDisplay('9')">9</button>
+            <button class="btn operator basic" id="x" onclick="appendToDisplay('x')">x</button>
+            
+            <button class="btn" id="4" onclick="appendToDisplay('4')">4</button>
+            <button class="btn" id="5" onclick="appendToDisplay('5')">5</button>
+            <button class="btn" id="6" onclick="appendToDisplay('6')">6</button>
+            <button class="btn operator basic" id="min" onclick="appendToDisplay('-')">-</button>
+            
+            <button class="btn" id="1" onclick="appendToDisplay('1')">1</button>
+            <button class="btn"id="2" onclick="appendToDisplay('2')">2</button>
+            <button class="btn"id="3" onclick="appendToDisplay('3')">3</button>
+            <button class="btn operator basic" id="plus" onclick="appendToDisplay('+')">+</button>
+            
+            <button class="btn" id="rev" >+/-</button>
+            <button class="btn zero" id="zero" onclick="appendToDisplay('0')">0</button>
+            <button class="btn" id="point" onclick="appendToDisplay('.')">.</button>
+            <button class="btn operator basic" id="=equal" onclick="calculate('')">=</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
