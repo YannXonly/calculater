@@ -8,8 +8,13 @@ function isErrorState() {
 function appendToDisplay(input) {
 	if (isErrorState()) return;
 
-	if (display.textContent === '0') display.textContent = input;
-	else display.textContent += input;
+	if (display.textContent === '0') {
+		display.textContent = input;
+	} else if (display.textContent === '-') {
+		display.textContent += input;
+	} else {
+		display.textContent += input;
+	}
 
 	if (display.textContent.length >= 15) {
 		display.textContent = 'EROOR';
@@ -20,6 +25,20 @@ function appendToDisplay(input) {
 function ClearDisplay() {
 	display.textContent = '0';
 	prevDisplay.textContent = '0';
+}
+
+function ReverseNotation() {
+	if (isErrorState()) return;
+
+	if (display.textContent === '0') {
+		display.textContent = '-';
+		return;
+	}
+
+	const value = Number(display.textContent);
+	if (Number.isNaN(value)) return;
+
+	display.textContent = String(-value);
 }
 
 function calculate() {
@@ -40,6 +59,10 @@ function Delete() {
 	if (!display) return;
 	if (isErrorState()) {
 		ClearDisplay();
+		return;
+	}
+	if (display.textContent === '-') {
+		display.textContent = '0';
 		return;
 	}
 	if (display.textContent.length <= 1) {
